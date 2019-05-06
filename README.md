@@ -20,7 +20,9 @@ Add more commands as you see fit
 
 FLAGS: 
 
--h, --help show this help message and exit
+-h, --help 
+                    
+                    show this help message and exit
 
 -c, --classifier=CLASSIFIER
 
