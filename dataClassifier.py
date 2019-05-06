@@ -210,7 +210,7 @@ def analysis(classifier, guesses, testLabels, testData, rawTestData, printImage)
             prediction = guesses[i]
             truth = testLabels[i]
             if (prediction != truth):
-                    print "==================================="
+                    print "=================================="
                     print "Mistake on example %d" % i 
                     print "Predicted %d; truth is %d" % (prediction, truth)
                     print "Image: "
