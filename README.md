@@ -5,9 +5,13 @@ sh -e commands.txt to run commands from commands.txt
 Currently in commands.txt
 
 python dataClassifier.py -c naiveBayes --autotune [runs classification using Naive Bayes on DEFAULT digits with autotuned k value]
+
 python dataClassifier.py -c perceptron [runs classification using Perceptron on DEFAULT digits with default values]
+
 python dataClassifier.py -c perceptron -w  [runs classification using Perceptron on DEFAULT digits and outputs weight values]
+
 python dataClassifier.py -c neuralNetwork -d digits -f sobel -i 60 -p 3.0 [runs classification using Neural Network on SPECIFIED digits using "sobel" edge detection features with 60 iterations and a learning value of 3.0]
+
 python dataClassifier.py -d digits -c naiveBayes -f enhanced -a -t 1000 [runs classification using Naive Bayes on SPECIFIED digits using "enhanced" feature detection with autotuned k value and a training set of 1000 data points]
 
 Add more commands as you see fit
