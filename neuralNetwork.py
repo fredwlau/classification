@@ -37,7 +37,10 @@ class NeuralNetworkClassifier:
     self.theta1 = np.random.randn(self.s2, self.s1)
     self.theta2 = np.random.randn(self.s3, self.s2)
 
-    size = 10 if len(self.legalLabels) == 10 else 45# smaller section size
+    if len(self.legalLabels) == 10: 
+      size = 10
+    else:
+      size = 45
     # alpha = 3.0  # learning rate
     n = len(trainingData)
 
@@ -56,17 +59,21 @@ class NeuralNetworkClassifier:
           label = trainingLabels[i]
           x = np.reshape(features.values(), (len(self.features), 1))
 
-          y = np.zeros((10, 1)) if len(self.legalLabels) == 10 else np.zeros((2, 1))
+          if len(self.legalLabels) == 10:
+            y = np.zeros((10, 1)) 
+          else:
+            y = np.zeros((2, 1))
+
           y[label] = 1.0
 
-          # forward propagation
+          # forward
           a1 = x
           z1 = np.dot(self.theta1, a1) + self.bias1
           a2 = sigmoid(z1)
           z2 = np.dot(self.theta2, a2) + self.bias2
           a3 = sigmoid(z2)
 
-          # backward propagation
+          # backward
           delta = (a3 - y) * sigmoidPrime(z2)
           delta_b2  = delta
           delta_t2 = np.dot(delta, a2.transpose())
@@ -102,8 +109,10 @@ class NeuralNetworkClassifier:
 
 def sigmoid(z):
   #sigmoid func
-  return 1.0 / (1.0 + np.exp(-z))
+  res = 1.0 / (1.0 + np.exp(-z))
+  return res
 
 def sigmoidPrime(z):
   #derivative of sigmoid func
-  return sigmoid(z) * (1 - sigmoid(z))
+  res = sigmoid(z) * (1 - sigmoid(z))
+  return res
