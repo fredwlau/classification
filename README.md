@@ -6,7 +6,9 @@ Currently in commands.txt
 
 python dataClassifier.py -c naiveBayes --autotune [runs classification using Naive Bayes on DEFAULT digits with autotuned k value]
 
-python dataClassifier.py -c perceptron [runs classification using Perceptron on DEFAULT digits with default values]
+python dataClassifier.py -c naiveBayes -d digits -f basic -t 1000 -k 2.5 [runs classification using Naive Bayes on SPECIFIED digits using basic feature extractor and a training set of 1000 data points and a k value of 2.5]
+
+python dataClassifier.py -c perceptron -d faces [runs classification using Perceptron on SPECIFIED faces with default values]
 
 python dataClassifier.py -c perceptron -w  [runs classification using Perceptron on DEFAULT digits and outputs weight values]
 
