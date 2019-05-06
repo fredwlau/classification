@@ -3,5 +3,5 @@ python dataClassifier.py -c naiveBayes --autotune
 python dataClassifier.py -c naiveBayes -d digits -f basic -t 1000 -k 2.5
 python dataClassifier.py -c perceptron -d faces 
 python dataClassifier.py -c perceptron -w  
-python dataClassifier.py -c neuralNetwork -d digits -f sobel -i 60 -p 3.0
+python dataClassifier.py -c neuralNetwork -d digits -f sobel -i 60 -p 3.0 -t 5000
 python dataClassifier.py -d digits -c naiveBayes -f enhanced -a -t 1000  
