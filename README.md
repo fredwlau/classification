@@ -2,7 +2,9 @@
 
 sh -e commands.txt to run multiple commands in the commands file
 
-FLAGS: -h, --help show this help message and exit
+FLAGS: 
+
+-h, --help show this help message and exit
 
 -c CLASSIFIER, --classifier=CLASSIFIER
 
