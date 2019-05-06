@@ -50,20 +50,20 @@ class PerceptronClassifier:
       for i in range(len(trainingData)):
           "*** YOUR CODE HERE ***"
           # Find the best label for each datum              
-          bestScore = None
-          bestY = None
+          best_score = None
+          best_val = None
           datum = trainingData[i]
           for y in self.legalLabels:
               score = datum * self.weights[y]
-              if score > bestScore or bestScore is None:
-                  bestScore = score
-                  bestY = y
+              if score > best_score or best_score is None:
+                  best_score = score
+                  best_val = y
           
-          actualY = trainingLabels[i]
-          if bestY != actualY:
+          actual_val = trainingLabels[i]
+          if best_val != actual_val:
               # Wrong guess, update weights
-              self.weights[actualY] = self.weights[actualY] + datum
-              self.weights[bestY] = self.weights[bestY] - datum
+              self.weights[actual_val] = self.weights[actual_val] + datum
+              self.weights[best_val] = self.weights[best_val] - datum
     
   def classify(self, data ):
     """

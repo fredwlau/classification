@@ -138,6 +138,7 @@ def enhancedFeatureExtractorDigit(datum):
         features[n] = percentRight < 0.27 and 1.0 or 0.0
     return features
 
+#adapated from GeeksForGeeks Sobel Edge detection
 def sobelEdgeFeaturesDigit(datum):
   from scipy import signal
   import numpy

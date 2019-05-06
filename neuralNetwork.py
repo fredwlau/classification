@@ -101,9 +101,9 @@ class NeuralNetworkClassifier:
     return guesses
 
 def sigmoid(z):
-  """The sigmoid function."""
+  #sigmoid func
   return 1.0 / (1.0 + np.exp(-z))
 
 def sigmoidPrime(z):
-  """Derivative of the sigmoid function."""
+  #derivative of sigmoid func
   return sigmoid(z) * (1 - sigmoid(z))
