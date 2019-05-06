@@ -12,7 +12,7 @@ python dataClassifier.py -c perceptron -d faces [runs classification using Perce
 
 python dataClassifier.py -c perceptron -w  [runs classification using Perceptron on DEFAULT digits and outputs weight values]
 
-python dataClassifier.py -c neuralNetwork -d digits -f sobel -i 60 -p 3.0 [runs classification using Neural Network on SPECIFIED digits using "sobel" edge detection features with 60 iterations and a learning value of 3.0]
+python dataClassifier.py -c neuralNetwork -d digits -f sobel -i 60 -p 3.0 -t 5000 [runs classification using Neural Network on SPECIFIED digits using "sobel" edge detection features with 60 iterations and a learning value of 3.0 and a training dataset size of 5000]
 
 python dataClassifier.py -d digits -c naiveBayes -f enhanced -a -t 1000 [runs classification using Naive Bayes on SPECIFIED digits using "enhanced" feature detection with autotuned k value and a training set of 1000 data points]
 
