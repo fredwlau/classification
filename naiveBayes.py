@@ -152,14 +152,7 @@ class NaiveBayesClassifier(classificationMethod.ClassificationMethod):
         Note: you may find 'self.features' a useful way to loop through all possible features
         """
         "*** YOUR CODE HERE ***"        
-        featuresOdds = []
-        for f in self.features:
-            top = self.conditionals[f][1][label1]
-            bottom = self.conditionals[f][1][label2]
-            ratio = top / bottom
-            featuresOdds.append((f, ratio))
-            
-        featuresOdds = [f for f, odds in sorted(featuresOdds, key=lambda t: -t[1])[:100]]
+        util.raiseNotDefined();
 
         return featuresOdds
         
