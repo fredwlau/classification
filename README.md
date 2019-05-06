@@ -22,25 +22,25 @@ FLAGS:
 
 -h, --help show this help message and exit
 
--c CLASSIFIER, --classifier=CLASSIFIER
+-c, --classifier=CLASSIFIER
 
                     The type of classifier [Default: mostFrequent][Choices: naiveBayes, perceptron, neuralNetwork, nb, nn]
--d DATA, --data=DATA
+-d, --data=DATA
 
                     Dataset to use [Default: digits][Choices: digits, faces]
                     
--t TRAINING, --training=TRAINING
+-t, --training=TRAINING
 
                     The size of the training set [Default: 100][Ideal Choice: 1000]
                     
--f FEATURES, --features=FEATURES
+-f, --features=FEATURES
 
                     The type of features [Default: basic][Choices: basic, sobel, enhanced]
 -w, --weights
 
                     Whether to print weights [Default: False]
                     
--k SMOOTHING, --smoothing=SMOOTHING
+-k, --smoothing=SMOOTHING
 
                     Smoothing parameter (ignored when using --autotune)
                     [Default: 2.0]
@@ -49,15 +49,15 @@ FLAGS:
 
                     Whether to automatically tune hyperparameter [Default: False]
                     
--i ITERATIONS, --iterations=ITERATIONS
+-i, --iterations=ITERATIONS
 
                     Maximum iterations to run training [Default: 3][Ideal: 60]
                     
--s TEST, --test=TEST
+-s, --test=TEST
 
                     Amount of test data to use [Default: 100]
                     
--p ALPHA, --alpha=ALPHA
+-p, --alpha=ALPHA
 
                     Learning rate for neural network [Default: 1.0][Ideal: 3.0]
 
@@ -66,3 +66,16 @@ TODO:
 Write up and analysis of the three classification algorithms [Naive Bayes, Perceptron, Neural Network]
 Compare running times and accuracy
 Tune models
+
+ISSUES:
+
+Issue with Neural Network where the face data won't fully load and we get an index out of bounds retrieval error on the training data -> error log:
+
+Traceback (most recent call last):
+  File "dataClassifier.py", line 449, in <module>
+    runClassifier(args, options)
+  File "dataClassifier.py", line 413, in runClassifier
+    classifier.train(trainingData, trainingLabels, validationData, validationLabels)
+  File "/Users/fredericklau/Downloads/classification/neuralNetwork.py", line 55, in train
+    features = trainingData[i]
+IndexError: list index out of range
