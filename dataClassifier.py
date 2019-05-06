@@ -12,7 +12,7 @@
 import mostFrequent
 import naiveBayes
 import perceptron
-import mira
+import neuralNetwork
 import samples
 import sys
 import util
